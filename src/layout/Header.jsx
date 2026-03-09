@@ -11,13 +11,10 @@ const Header = () => {
   return (
     <header className="site-header">
       <nav className="navigation-menu">
-        <img src={logo} className="logobtn" alt=""></img>
-        <Link
-          to="/"
-          onClick={() => {
-            setTriggerMenu(false);
-          }}
-        ></Link>
+        <Link to="/" className="logolink">
+          <img src={logo} className="logobtn" />
+        </Link>
+
         <img
           src={menuIcon}
           className="menu"

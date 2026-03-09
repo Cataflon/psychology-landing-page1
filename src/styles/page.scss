@@ -1,4 +1,10 @@
 .content-page{
-    height: 1000px;
     padding-top: 100px;
+    .text-content{
+        max-width: 800px;
+        margin: auto;
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        line-height: 1.6;
+    }
 }
