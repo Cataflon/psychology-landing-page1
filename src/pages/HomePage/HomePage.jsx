@@ -44,11 +44,11 @@ const HomePage = () => {
       title: "Title 1",
       description: "",
       button_link: "",
-      color: "aquablue",
+      color: "black",
     },
     {
       image: "",
-      title: "Title 4",
+      title: "Title 2",
       description: "",
       button_link: "",
       color: "green",
@@ -62,16 +62,17 @@ const HomePage = () => {
     },
     {
       image: "",
-      title: "Title 2",
+      title: "Title 4",
       description: "",
       button_link: "",
       color: "brown",
     },
   ];
+
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <>
+    <div className="homepage-container">
       <div className="homepage-wrapper">
         <div className="image-wrapper">
           <img src={backgroundImage} alt="a" className="bckgrnd" />
@@ -79,56 +80,46 @@ const HomePage = () => {
         <div className="text-overlay">
           <h1>Psiholog Clinician Irina Manarca</h1>
           <h1>Evidence Based Practitioner</h1>
-          <p>Evaluare si Consiliere Psihologica Indinpmviduala pentru Adulti</p>
+          <p>Evaluare si Consiliere Psihologica Individuala pentru Adulti</p>
         </div>
       </div>
+
       <div className="main">
         <div className="cards-info-wrapper">
           {cardsModel.map((item, index) => (
             <Card cardImage={item.image} cardText={item.text} key={index} />
           ))}
         </div>
+
         <div className="tags-info-wrapper">
           {tagsModel.map((item, index) => (
             <Tag
               text={item.text}
               key={index}
               active={activeTab === index}
-              onHandle={() => {
-                const stack = document.querySelectorAll(".stack");
-
-                if (activeTab !== 0) {
-                  if (!stack[index - 1].classList.contains("up")) {
-                    stack[index - 1].classList.add("visible");
-                    stack[activeTab - 1].classList.remove("up");
-                  }
-                } else {
-                  stack[index + 1].classList.add("up");
-                }
-
-                // if (index !== 0) {
-                //   stack[index - 1].classList.add("up");
-                // }
-                setActiveTab(index);
-              }}
+              onHandle={() => setActiveTab(index)}
             />
           ))}
         </div>
+
         <div className="tags-frame">
           {frameModel.map((item, index) => (
             <div
               key={index}
-              className={`screen
-                 ${index === 0 ? "" : "stack"}
-                 `}
-              style={{ backgroundColor: item.color }}
+              className={`screen ${index <= activeTab ? "visible" : ""}`}
+              style={{
+                backgroundColor: item.color,
+                zIndex: index,
+              }}
             >
-              <p>{item.title}</p>
+              <div className="screen-content">
+                <h2>{item.title}</h2>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
