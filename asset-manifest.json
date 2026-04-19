@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/psychology-landing-page1/static/css/main.dab566fa.css",
+    "main.js": "/psychology-landing-page1/static/js/main.e5e23ecd.js",
+    "static/media/backgroundImage.png": "/psychology-landing-page1/static/media/backgroundImage.ab611359d63d6ccb410d.png",
+    "static/media/Services.jpg": "/psychology-landing-page1/static/media/Services.79ae84349b11fd52286d.jpg",
+    "static/media/cardImage.png": "/psychology-landing-page1/static/media/cardImage.906122706b6906ca532c.png",
+    "static/media/menu-icon.png": "/psychology-landing-page1/static/media/menu-icon.a32ef1aa4872b8036450.png",
+    "static/media/aboutMe.jpg": "/psychology-landing-page1/static/media/aboutMe.a1120b9a560d6849a337.jpg",
+    "static/media/logo.png": "/psychology-landing-page1/static/media/logo.758cd622b659d637b877.png",
+    "static/media/logo-title.png": "/psychology-landing-page1/static/media/logo-title.c0c4be34fa833efb2a4e.png",
+    "index.html": "/psychology-landing-page1/index.html",
+    "main.dab566fa.css.map": "/psychology-landing-page1/static/css/main.dab566fa.css.map",
+    "main.e5e23ecd.js.map": "/psychology-landing-page1/static/js/main.e5e23ecd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dab566fa.css",
+    "static/js/main.e5e23ecd.js"
+  ]
+}
