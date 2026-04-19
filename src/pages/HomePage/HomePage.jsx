@@ -4,6 +4,8 @@ import Card from "../../components/Card/Card";
 import cardImage from "../../assets/cards/cardImage.png";
 import "./HomePage.scss";
 import Tag from "../../components/Tag/Tag";
+import GradientText from "../../components/GradientText/GradientText";
+import Iridescence from "../../components/Iridescence/Iridescence";
 
 const HomePage = () => {
   const cardsModel = [
@@ -75,12 +77,26 @@ const HomePage = () => {
     <div className="homepage-container">
       <div className="homepage-wrapper">
         <div className="image-wrapper">
-          <img src={backgroundImage} alt="a" className="bckgrnd" />
+          <Iridescence
+            color={[1, 1, 1]}
+            speed={0.5}
+            amplitude={0.2}
+            mouseReact={true}
+            className="hero-iridescence"
+          />
+          <div className="dark-overlay"></div>
         </div>
         <div className="text-overlay">
-          <h1>Psiholog Clinician Irina Manarca</h1>
-          <h1>Evidence Based Practitioner</h1>
-          <p>Evaluare si Consiliere Psihologica Individuala pentru Adulti</p>
+          <GradientText
+            colors={["#160f3d", "#202084", "#0bb5d1", "#0798b1"]}
+            animationSpeed={6}
+            showBorder={false}
+            className="custom-gradient-title"
+          >
+            Psihoterapeut si Psiholog Irina Manarca
+          </GradientText>
+
+          <h1>Acreditata de Colegiul Psihologilor din Romania</h1>
         </div>
       </div>
 
