@@ -11,14 +11,12 @@ const App = () => {
   //contact
   // reservation
   return (
-    <BrowserRouter basename="/psychology-landing-page1">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/consiliere" element={<Consiliere />} />
-        <Route path="/consiliere/services" element={<Services />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutMe />} />
+      <Route path="/consiliere" element={<Consiliere />} />
+      <Route path="/consiliere/services" element={<Services />} />
+    </Routes>
     // <div className="content">
     //   <AboutMe/>
     // </div>
